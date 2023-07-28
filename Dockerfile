@@ -9,7 +9,7 @@ RUN npm install -g yarn
 
 # 将 package.json 和 package-lock.json  yarn.lock 复制到工作目录
 COPY package*.json  ./
-COPY yarn.lock  ./
+# COPY yarn.lock  ./
 
 # 安装项目依赖
 RUN yarn install
