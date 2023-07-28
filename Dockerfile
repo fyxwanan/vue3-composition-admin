@@ -4,15 +4,14 @@ FROM node:16.10.0 AS builder
 # 设置工作目录
 WORKDIR /app
 
-# 安装yarn
-RUN npm install -g yarn
-
-# 将 package.json 和 package-lock.json  yarn.lock 复制到工作目录
+# 将 package.json 和 package-lock.json  复制到工作目录
 COPY package*.json  ./
-# COPY yarn.lock  ./
+
+# 安装yarn
+RUN npm install yarn
 
 # 安装项目依赖
-RUN yarn install
+RUN npx yarn install
 
 # 将整个项目复制到工作目录
 COPY . .
