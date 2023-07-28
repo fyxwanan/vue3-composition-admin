@@ -10,6 +10,9 @@ COPY package*.json  ./
 # 清理缓存
 RUN npm cache clear --force
 
+# 更新npm
+RUN npm install -g npm@9.8.1
+
 # 安装yarn
 RUN npm install yarn
 
