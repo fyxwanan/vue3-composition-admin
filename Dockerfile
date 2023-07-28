@@ -1,11 +1,14 @@
 # 使用 Node.js 镜像作为基础镜像
-FROM node:16.10.0 AS builder
+FROM node:16 AS builder
 
 # 设置工作目录
 WORKDIR /app
 
 # 将 package.json 和 package-lock.json  复制到工作目录
 COPY package*.json  ./
+
+# 清理缓存
+RUN npm cache clear --force
 
 # 安装yarn
 RUN npm install yarn
