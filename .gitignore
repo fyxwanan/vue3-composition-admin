@@ -6,6 +6,10 @@ node_modules
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 
+/yarn.lock
+/package-lock.json
+yarn.lock
+package-lock.json
 
 # local env files
 .env.local
