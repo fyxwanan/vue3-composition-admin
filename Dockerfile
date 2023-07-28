@@ -4,11 +4,15 @@ FROM node:16 AS builder
 # 设置工作目录
 WORKDIR /app
 
-# 将 package.json 和 package-lock.json 复制到工作目录
-COPY package*.json ./
+# 将 package.json 和 package-lock.json  yarn.lock 复制到工作目录
+COPY package*.json  ./
+COPY yarn.lock  ./
+
+# 安装yarn
+RUN npm install yarn -g
 
 # 安装项目依赖
-RUN npm install
+RUN yarn install
 
 # 将整个项目复制到工作目录
 COPY . .
@@ -23,7 +27,7 @@ FROM nginx:latest
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # 使用 80 端口暴露 Nginx 服务
-EXPOSE 80
+EXPOSE 8088
 
 # 启动 Nginx 服务
 CMD ["nginx", "-g", "daemon off;"]

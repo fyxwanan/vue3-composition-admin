@@ -11965,7 +11965,7 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-class-component@8.0.0-0:
+vue-class-component@8.0.0-rc.1:
   version "8.0.0-rc.1"
   resolved "https://npm.iyunquna.com/vue-class-component/-/vue-class-component-8.0.0-rc.1.tgz#db692cd97656eb9a08206c03d0b7398cdb1d9420"
   integrity sha1-22ks2XZW65oIIGwD0Lc5jNsdlCA=
@@ -12119,7 +12119,7 @@ vuex-persistedstate@^4.0.0-beta.1:
     deepmerge "^4.2.2"
     shvl "^2.0.2"
 
-vuex@4.0.0-0:
+vuex@4.0.0:
   version "4.0.0"
   resolved "https://npm.iyunquna.com/vuex/-/vuex-4.0.0.tgz#ac877aa76a9c45368c979471e461b520d38e6cf5"
   integrity sha1-rId6p2qcRTaMl5Rx5GG1INOObPU=
